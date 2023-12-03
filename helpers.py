@@ -22,6 +22,8 @@ def prepare_dataset_nli(examples, tokenizer, max_seq_length=None):
     )
 
     tokenized_examples['label'] = examples['label']
+    if "type" in examples:
+        tokenized_examples['type'] = examples['type']
     return tokenized_examples
 
 
